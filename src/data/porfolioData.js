@@ -31,7 +31,7 @@ export const portfolios = [
   },
   {
     id: 3,
-    category: "css",
+    category: "react",
     image: FitClub,
     link1: "",
     link2: "",
