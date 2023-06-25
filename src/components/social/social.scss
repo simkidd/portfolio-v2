@@ -1,0 +1,48 @@
+.socials {
+    position: fixed;
+    top: 30%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
+    ul {
+
+        li {
+            width: 120px;
+            
+            a {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                width: 100%;
+                color: #fff;
+                padding: 0.5rem;
+                transform: translateX(75px);
+                transition: all 0.4s ease-in-out;
+                &:hover{
+                    transform: translateX(0);
+                }
+                &.linkedin {
+                    background: blue;
+                }
+
+                &.github {
+                    background: #333;
+                }
+
+                &.mail {
+                    background: #6fc2b0;
+                }
+
+                &.resume {
+                    background: #565f69;
+                }
+            }
+        }
+    }
+}

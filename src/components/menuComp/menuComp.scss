@@ -1,0 +1,96 @@
+.menu__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid__item {
+        .portfolio__content {
+            display: block;
+            position: relative;
+            overflow: hidden;
+
+            .portfolio-image {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transition: all 0.4s ease-in-out;
+                }
+
+                &:hover {
+                    ul {
+                        transform: translate(-50%, -50%);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: 1;
+                        transition: all 0.4s ease-in-out;
+                    }
+
+                    &::before {
+                        width: 100%;
+                        height: 200px;
+                        background: blue;
+                        opacity: 0.8;
+                        transition: all 0.4s ease-in-out;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+
+                ul {
+                    transition: all 0.4s ease-in-out;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+
+                    li {
+                        background-color: grey;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        transition: all 0.4s ease-in-out;
+                        overflow: hidden;
+
+
+                        a {
+                            padding: 0.5rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: all 0.4s ease-in-out;
+                            color: #fff;
+
+                            &:hover {
+                                background-color: red;
+                            }
+                        }
+                    }
+                }
+            }
+
+            h6 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
