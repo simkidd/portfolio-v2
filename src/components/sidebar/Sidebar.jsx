@@ -1,10 +1,14 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./sidebar.scss";
+import { FaTimes } from "react-icons/fa";
 
 const Sidebar = ({ navShow, setNavShow }) => {
   return (
     <div className={`sidebar ${navShow ? "show" : ""}`}>
+      <button className="menuClose__btn" onClick={() => setNavShow(!navShow)}>
+        <FaTimes size={20} />
+      </button>
       <nav>
         <div className="avatar__wrap">
           {/* <img src="" alt="" /> */}

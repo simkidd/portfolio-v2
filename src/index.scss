@@ -74,16 +74,17 @@ body {
         height: 100vh;
         position: relative;
 
-        .menu__btn {
+        .menuOpen__btn {
             position: fixed;
             display: none;
             cursor: pointer;
             color: var(--whiteColor);
             
             @media screen and (max-width: 768px) {
-                right: 0;
+                // right: 0;
+                left: 0;
                 top: 0;
-                z-index: 20;
+                z-index: 10;
                 background-color: var(--backgroundDarkGrey);
                 margin: 2rem;
                 padding: 0.4rem;

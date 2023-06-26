@@ -21,7 +21,7 @@ const Theme = () => {
     <ThemeToggler>
       <div className="light-dark-mode">
         <button onClick={themeToggler}>
-          {theme === "dark-theme" ? <FaSun size={16} /> : <FaMoon size={16} />}
+          {theme === "dark-theme" ? <FaSun size={20} /> : <FaMoon size={20} />}
         </button>
       </div>
     </ThemeToggler>
@@ -32,9 +32,9 @@ export default Theme;
 
 const ThemeToggler = styled.div`
   position: fixed;
-  right: 5px;
-  bottom: 10%;
-  z-index: 50;
+  right: 2rem;
+  top: 2rem;
+  z-index: 5;
 
   button {
     background: var(--backgroundLightColor2);
