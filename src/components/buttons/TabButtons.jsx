@@ -29,19 +29,19 @@ const ButtonWrap = styled.div`
   margin-bottom: 1rem;
 
   button {
-    background-color: gray;
-    color: white;
+    background-color: var(--backgroundLightColor2);
+    color: var(--whiteColor);
     padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
 
     &:hover {
-      background-color: lightgray;
+      background-color: var(--primaryColor); 
     }
 
-    &.active{
-        background-color: red;
+    &.active {
+      background-color: var(--primaryColor);
     }
   }
 `;

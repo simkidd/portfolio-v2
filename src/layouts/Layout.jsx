@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "../components/sidebar/Sidebar";
 import { FaBars } from "react-icons/fa";
 import Socials from "../components/social/Socials";
+import Theme from "../components/theme/Theme";
 
 const Layout = () => {
   const [navShow, setNavShow] = useState(false);
@@ -10,10 +11,11 @@ const Layout = () => {
   return (
     <div className="app__container">
       <Sidebar navShow={navShow} setNavShow={setNavShow} />
-      <div className="menu__btn">
-        <FaBars size={24} onClick={() => setNavShow(!navShow)} />
-      </div>
+      <button className="menu__btn" onClick={() => setNavShow(!navShow)}>
+        <FaBars size={20} />
+      </button>
       <Socials />
+      <Theme />
       <div className="main__content">
         <Outlet />
       </div>

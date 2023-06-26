@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
     @media screen and (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -39,7 +40,7 @@
                     &::before {
                         width: 100%;
                         height: 200px;
-                        background: blue;
+                        background: var(--primaryColor);
                         opacity: 0.8;
                         transition: all 0.4s ease-in-out;
                     }
@@ -63,7 +64,7 @@
                     opacity: 0;
 
                     li {
-                        background-color: grey;
+                        background-color: var(--border-color);
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -78,10 +79,10 @@
                             align-items: center;
                             justify-content: center;
                             transition: all 0.4s ease-in-out;
-                            color: #fff;
+                            color: var(--whiteColor);
 
                             &:hover {
-                                background-color: red;
+                                background-color: var(--secondaryColor);
                             }
                         }
                     }

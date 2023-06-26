@@ -22,19 +22,20 @@ const TitleWrapper = styled.div`
     font-size: 36px;
     padding-bottom: 0.7rem;
     display: inline;
+    color: var(--whiteColor);
     &::before {
       content: "";
       position: absolute;
       bottom: 0;
       width: 7.4rem;
       height: 0.33rem;
-      background-color: red;
+      background: var(--primaryColor);
       left: 0;
       border-radius: 15px;
     }
     span {
       font-weight: 900;
-      color: rgba(25, 29, 43, 0.44);
+      color: rgba(25, 29, 43, 0.3);
       font-size: 5rem;
       position: absolute;
       top: 30%;

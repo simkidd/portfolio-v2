@@ -1,15 +1,16 @@
 .sidebar {
     width: 250px;
     height: 100%;
-    background: grey;
+    background: var(--backgroundDarkGrey);
     position: fixed;
     transition: all 0.3s ease-in-out;
+
     @media screen and (max-width: 768px) {
         transform: translateX(-100%);
         z-index: 20;
     }
 
-    &.show{
+    &.show {
         transform: translateX(0);
         z-index: 20;
     }
@@ -21,13 +22,22 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        border-right: 1px solid #2e344e;
+        border-right: 1px solid var(--borderColor);
+        overflow: hidden;
 
         .avatar__wrap {
             width: 100%;
-            border-bottom: 1px solid #2e344e;
+            border-bottom: 1px solid var(--borderColor);
             text-align: center;
-            padding: 1rem
+            padding: 1rem;
+            font-weight: bold;
+
+            img {
+                width: 70%;
+                border: 6px solid var(--borderColor);
+                border-radius: 50%;
+                object-fit: cover;
+            }
         }
 
         .navlinks {
@@ -49,15 +59,15 @@
                     position: relative;
                     z-index: 10;
                     color: inherit;
-                    
+
                     &.active {
-                        background: red;
+                        background: var(--primaryColorLight);
                         color: #fff;
                         transition: all 0.3s ease-in-out;
                     }
 
                     &:hover {
-                        color: #fff;
+                        color: var(--whiteColor);
                     }
 
                     &::before {
@@ -67,7 +77,7 @@
                         left: 0;
                         width: 0;
                         height: 50%;
-                        background: red;
+                        background: var(--primaryColor);
                         transition: all 0.3s cubic-bezier(1, -0.2, 0.25, 0.95);
                         opacity: 0.21;
                         z-index: -1;
@@ -81,14 +91,12 @@
             }
         }
 
-        .social {}
-
         footer {
             width: 100%;
-            border-top: 1px solid #2e344e;
+            border-top: 1px solid var(--borderColor);
 
             span {
-                padding: 1.5rem 0;
+                padding: 1.3rem 0;
                 display: block;
                 text-align: center;
                 font-size: 12px;

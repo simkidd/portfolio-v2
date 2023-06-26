@@ -47,8 +47,10 @@ const ContactForm = () => {
       </InputField>
       <InputField>
         <Button type="submit" className="btn">
-          Let's Connect
-          <SiMinutemailer size={18} />
+          <p>
+            Let's Connect
+            <SiMinutemailer size={18} />
+          </p>
         </Button>
       </InputField>
     </Form>
@@ -59,6 +61,9 @@ export default ContactForm;
 
 const Form = styled.form`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   @media screen and (max-width: 768px) {
     width: 100%;
   }
@@ -67,20 +72,17 @@ const Form = styled.form`
 const InputField = styled.div`
   width: 100%;
   position: relative;
-  &:not(:last-child) {
-    margin-bottom: 2rem;
-  }
   label {
     position: absolute;
     left: 10px;
-    top: -12px;
+    top: -10px;
     display: inline-block;
-    background: #10121a;
-    padding: 0 0.5rem;
+    background: var(--backgroundDarkColor);
+    padding: 0 0.2rem;
     color: inherit;
   }
   input {
-    border: 1px solid #333;
+    border: 1px solid var(--borderColor);
     background: transparent;
     padding: 0 15px;
     height: 50px;
@@ -90,15 +92,20 @@ const InputField = styled.div`
   }
   textarea {
     background: transparent;
-    border: 1px solid #333;
+    border: 1px solid var(--borderColor);
     outline: none;
     width: 100%;
     color: inherit;
     padding: 0.8rem 1rem;
     resize: none;
   }
-  .btn {
+
+  p {
+    display: flex;
     padding: 0.75rem;
+    align-items: center;
+    color: var(--whiteColor);
+    z-index: 2;
     svg {
       margin-left: 0.5rem;
     }

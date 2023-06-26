@@ -1,3 +1,60 @@
+:root {
+    --primaryColor: #007bff;
+    --primaryColorLight: #057fff;
+    --secondaryColor: #ff7675;
+    --backgroundDarkColor: #f1f1f1;
+    --backgroundDarkGrey: #e4e4e4;
+    --borderColor: #cbced8;
+    --backgroundLightColor: #f1f1f1;
+    --backgroundLightColor2: rgba(3, 127, 255, 0.3);
+    --whiteColor: #151515;
+    --fontLightColor: #313131;
+    --fontDarkColor: #313131;
+    --fontDarkColor2: #151515;
+    --sidebarDarkColor: #e4e4e4;
+    --scrollbarBgColor: #383838;
+    --scrollbarThumbColor: #6b6b6b;
+    --scrollbarTrackColor: #383838;
+}
+
+.light-theme {
+    --primaryColor: #007bff;
+    --primaryColorLight: #057fff;
+    --secondaryColor: #ff7675;
+    --backgroundDarkColor: #f1f1f1;
+    --backgroundDarkGrey: #e4e4e4;
+    --borderColor: #cbced8;
+    --backgroundLightColor: #f1f1f1;
+    --backgroundLightColor2: rgba(3, 127, 255, 0.3);
+    --whiteColor: #151515;
+    --fontLightColor: #313131;
+    --fontDarkColor: #313131;
+    --fontDarkColor2: #151515;
+    --sidebarDarkColor: #e4e4e4;
+    --scrollbarBgColor: #383838;
+    --scrollbarThumbColor: #6b6b6b;
+    --scrollbarTrackColor: #383838;
+}
+
+.dark-theme {
+    --primaryColor: #007bff;
+    --primaryColorLight: #057fff;
+    --secondaryColor: #ff7675;
+    --backgroundDarkColor: #10121a;
+    --backgroundDarkGrey: #20232d;
+    --borderColor: #1c1f2b;
+    --backgroundLightColor: #10121a;
+    --backgroundLightColor2: rgba(3, 127, 255, 0.3);
+    --whiteColor: #f1f1f1;
+    --fontLightColor: #a4acc4;
+    --fontDarkColor: #f1f1f1;
+    --fontDarkColor2: #e4e4e4;
+    --sidebarDarkColor: #20232d;
+    --scrollbarBgColor: #383838;
+    --scrollbarThumbColor: #6b6b6b;
+    --scrollbarTrackColor: #383838;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +64,9 @@
 body {
     font-family: 'Nunito', sans-serif;
     font-size: 1rem;
-    color: #a4acc4;
+    color: var(--fontLightColor);
     transition: all 0.4s ease;
-    background: #10121a;
+    background: var(--backgroundLightColor);
 
     .app__container {
         display: flex;
@@ -18,19 +75,21 @@ body {
         position: relative;
 
         .menu__btn {
-            position: absolute;
-            right: 0;
-            top: 0;
-            margin: 2rem;
-            z-index: 20;
+            position: fixed;
             display: none;
-
-            svg {
-                cursor: pointer;
-            }
-
+            cursor: pointer;
+            color: var(--whiteColor);
+            
             @media screen and (max-width: 768px) {
-                display: block;
+                right: 0;
+                top: 0;
+                z-index: 20;
+                background-color: var(--backgroundDarkGrey);
+                margin: 2rem;
+                padding: 0.4rem;
+                display: flex;
+                border: 1px solid var(--borderColor);
+
             }
         }
 
@@ -77,7 +136,7 @@ a {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: #6b6b6b;
+    background-color: var(--scrollbarThumbColor);
 }
 
 ::-webkit-scrollbar-track {

@@ -12,9 +12,10 @@ const Button = ({ children, className, type }) => {
 export default Button;
 
 const PrimaryButton = styled.button`
-  color: #fff;
-  border: 2px solid #ccc;
-  background: none;
+  color: inherit;
+  border: 2px solid var(--borderColor);
+  background: transparent;
+  /* background: var(--primaryColor); */
   margin: 1.5rem 0;
   cursor: pointer;
   display: flex;
@@ -22,7 +23,7 @@ const PrimaryButton = styled.button`
   width: fit-content;
   transition: all 0.3s ease-in-out;
   position: relative;
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     width: 0;
@@ -33,8 +34,8 @@ const PrimaryButton = styled.button`
     opacity: 0.5;
   }
 
-  &:hover::after {
+  &:hover::before {
     width: 100%;
-    background: red;
+    background: var(--primaryColor);
   }
 `;

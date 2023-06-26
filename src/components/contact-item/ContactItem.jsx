@@ -6,7 +6,7 @@ const ContactItem = ({ icon, title, content }) => {
     <Item>
       <div className="left">{icon}</div>
       <div className="right">
-        <h6>{title}</h6>
+        {/* <h6>{title}</h6> */}
         <p>{content}</p>
       </div>
     </Item>
@@ -16,27 +16,24 @@ const ContactItem = ({ icon, title, content }) => {
 export default ContactItem;
 
 const Item = styled.div`
-  background: #333;
+  background: var(--backgroundDarkGrey);
   display: flex;
   align-items: center;
-  &:not(:last-child) {
-    margin-bottom: 2rem;
-  }
 
   .left {
-    padding: 1.5rem;
-    border: 1px solid #555;
+    padding: 1rem;
+    border: 1px solid var(--borderColor);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 2rem;
+    margin-right: 1rem;
     svg {
-      font-size: 1.5rem;
+      font-size: 20px;
     }
   }
   .right {
     h6 {
-      color: #fff;
+      color: var(--whiteColor);
       font-size: 1rem;
       padding-bottom: 0.5rem;
     }
