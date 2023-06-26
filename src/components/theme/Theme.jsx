@@ -2,21 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import styled from "styled-components";
 
-const Theme = () => {
-  const [theme, setTheme] = useState("dark-theme");
-
-  useEffect(() => {
-    document.documentElement.className = theme;
-  }, [theme]);
-
-  const themeToggler = () => {
-    if (theme === "light-theme") {
-      setTheme("dark-theme");
-    } else {
-      setTheme("light-theme");
-    }
-  };
-
+const Theme = ({theme, themeToggler}) => {
+  
   return (
     <ThemeToggler>
       <div className="light-dark-mode">

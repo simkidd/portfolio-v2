@@ -9,13 +9,37 @@ import Preloader from "../components/preloader/Preloader";
 const Layout = () => {
   const [navShow, setNavShow] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [theme, setTheme] = useState("dark-theme");
 
   useEffect(() => {
     // Simulate an asynchronous task or API call
     setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
+    }, 3000);
   }, []);
+
+  // Load theme from localStorage on initial render
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
+
+  // Set theme class on document root element
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
+
+  const themeToggler = () => {
+    if (theme === "light-theme") {
+      setTheme("dark-theme");
+      localStorage.setItem("theme", "dark-theme");
+    } else {
+      setTheme("light-theme");
+      localStorage.setItem("theme", "light-theme");
+    }
+  };
 
   return (
     <div className="app__container">
@@ -24,11 +48,14 @@ const Layout = () => {
       ) : (
         <>
           <Sidebar navShow={navShow} setNavShow={setNavShow} />
-          <button className="menuOpen__btn" onClick={() => setNavShow(!navShow)}>
+          <button
+            className="menuOpen__btn"
+            onClick={() => setNavShow(!navShow)}
+          >
             <FaBars size={20} />
           </button>
           <Socials />
-          <Theme />
+          <Theme theme={theme} themeToggler={themeToggler} />
           <div className="main__content">
             <Outlet />
           </div>
