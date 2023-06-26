@@ -7,6 +7,7 @@ import Mongo from "../assets/mongo.png";
 import GitHub from "../assets/github.png";
 import Tailwind from "../assets/tailwind.png";
 import Firebase from "../assets/firebase.png";
+import Sass from '../assets/sass.png'
 
 export const Data = [
   {
@@ -36,6 +37,10 @@ export const Data = [
   {
     icon: GitHub,
     name: "GITHUB",
+  },
+  {
+    icon: Sass,
+    name: "SASS",
   },
   {
     icon: Tailwind,
