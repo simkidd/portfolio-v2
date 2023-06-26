@@ -4,7 +4,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const Preloader = () => {
   const [text] = useTypewriter({
-    words: ["John Mason"],
+    words: ["oniDev"],
     loop: 0,
     typeSpeed: 120,
     deleteSpeed: 80,
