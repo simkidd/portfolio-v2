@@ -28,7 +28,7 @@ const CardsGrid = ({ items, loading }) => {
                   </ul>
                 </div>
                 <h6>{item.title}</h6>
-                <p>{item.text}</p>
+                {/* <p>{item.text}</p> */}
               </div>
             </div>
           ))}
