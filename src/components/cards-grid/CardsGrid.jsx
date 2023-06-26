@@ -16,12 +16,12 @@ const CardsGrid = ({ items, loading }) => {
                   <img src={item.image} alt="" />
                   <ul>
                     <li>
-                      <a href="">
+                      <a href={item.github} target="_blank" rel="noreferrer">
                         <BsCodeSlash size={22} />
                       </a>
                     </li>
                     <li>
-                      <a href="">
+                      <a href={item.live} target="_blank" rel="noreferrer">
                         <FiExternalLink size={22} />
                       </a>
                     </li>
