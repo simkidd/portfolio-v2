@@ -33,6 +33,16 @@ const TitleWrapper = styled.div`
       left: 0;
       border-radius: 15px;
     }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 3.5rem;
+      height: 0.33rem;
+      background: var(--secondaryColor);
+      left: 0;
+      border-radius: 15px;
+    }
     span {
       font-weight: 900;
       color: rgba(25, 29, 43, 0.3);

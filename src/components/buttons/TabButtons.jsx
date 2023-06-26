@@ -41,7 +41,7 @@ const ButtonWrap = styled.div`
     }
 
     &.active {
-      background-color: var(--primaryColor);
+      background-color: var(--secondaryColor);
     }
   }
 `;

@@ -13,7 +13,9 @@
     &.show {
         transform: translateX(0);
         z-index: 20;
-        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.3);
+        @media screen and (max-width: 768px) {
+            box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.3);
+        }
     }
 
 
@@ -21,13 +23,16 @@
         position: absolute;
         right: -2.6rem;
         top: 0;
-        display: flex;
+        display: none;
         background-color: var(--backgroundDarkGrey);
         margin-top: 0.5rem;
         padding: 0.4rem;
         border: 1px solid var(--borderColor);
         cursor: pointer;
         color: var(--whiteColor);
+        @media screen and (max-width: 768px) {
+            display: flex;
+        }
     }
 
     nav {
@@ -46,6 +51,7 @@
             text-align: center;
             padding: 1rem;
             font-weight: bold;
+            font-size: 2rem;
 
             img {
                 width: 70%;

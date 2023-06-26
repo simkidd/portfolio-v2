@@ -10,11 +10,24 @@
     z-index: 40;
     transition: opacity 2s ease-in-out;
 
+    .type__text {
+        font-size: 7vw;
+        color: var(--fontLightColor);
+        position: relative;
+
+        @media screen and (max-width: 768px) {
+            font-size: 12vw;
+        }
+    }
+
     .animated-text {
         font-size: 7vw;
         color: var(--fontLightColor);
         position: relative;
-        // text-transform: uppercase;
+
+        @media screen and (max-width: 768px) {
+            font-size: 12vw;
+        }
 
         &::before {
             position: absolute;
@@ -43,11 +56,5 @@
     70%,
     90% {
         width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .animated-text {
-        font-size: 12vw;
     }
 }
