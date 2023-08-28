@@ -10,6 +10,7 @@ import BlogApp from "../assets/projects/blog-app.png";
 import Real from "../assets/projects/real-explorer.png";
 import Lendsqr from "../assets/projects/lendsqr.png";
 import Evogym from "../assets/projects/evogym.png";
+import Netreelz from "../assets/projects/netreelz.png"
 
 export const portfolios = [
   {
@@ -78,10 +79,10 @@ export const portfolios = [
   {
     id: 8,
     category: "react",
-    image: Evogym,
+    image: Netreelz,
     github: "",
-    live: "https://evo-fitness-gym.vercel.app/",
-    title: "EvoGym",
+    live: "https://netreelz.vercel.app/",
+    title: "NetReelz",
     text: "Created with React App",
   },
   {
