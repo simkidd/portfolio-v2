@@ -8,6 +8,7 @@ import GitHub from "../assets/github.png";
 import Tailwind from "../assets/tailwind.png";
 import Firebase from "../assets/firebase.png";
 import Sass from '../assets/sass.png'
+import Typescript from '../assets/typescript.png'
 
 export const Data = [
   {
@@ -25,6 +26,10 @@ export const Data = [
   {
     icon: ReactIcon,
     name: "REACT JS",
+  },
+  {
+    icon: Typescript,
+    name: "TYPESCRIPT",
   },
   {
     icon: Node,

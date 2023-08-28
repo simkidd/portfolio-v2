@@ -38,12 +38,12 @@ const Socials = () => {
             Email
           </Link>
         </li>
-        <li>
+        {/* <li>
           <a href={Resume} download className="resume">
             <BsFillPersonLinesFill size={30} />
             Resume
           </a>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

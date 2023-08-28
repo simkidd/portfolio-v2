@@ -19,7 +19,11 @@ const About = () => {
 
   const iconVariants = {
     hidden: { opacity: 0, scale: 0.1 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.8 } },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, delay: 0.8 },
+    },
   };
 
   return (
@@ -64,7 +68,7 @@ const About = () => {
         >
           <div></div>
           <ul className="social__icons">
-            <li>
+            {/* <li>
               <motion.a
                 // href={Resume}
                 download
@@ -75,7 +79,7 @@ const About = () => {
                 Resume
                 <BsFillPersonLinesFill size={30} />
               </motion.a>
-            </li>
+            </li> */}
             <li>
               <motion.a
                 href="mailto:johnmsn22@gmail.com"
