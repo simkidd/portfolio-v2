@@ -28,6 +28,7 @@ const Contact = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
+          className="contact__wrap"
         >
           <div>
             <Title title="Contact" span="Contact" />
@@ -40,17 +41,14 @@ const Contact = () => {
               <div className="inner__left">
                 <ContactItem
                   icon={<HiPhone />}
-                  title="Phone"
                   content="+234 7033101706"
                 />
                 <ContactItem
                   icon={<HiOutlineMail />}
-                  title="E-mail"
                   content="johnmsn22@gmail.com"
                 />
                 <ContactItem
                   icon={<MdLocationOn />}
-                  title="Location"
                   content="Port Harcourt, Rivers, Nigeria"
                 />
               </div>

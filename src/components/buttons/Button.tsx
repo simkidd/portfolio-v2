@@ -1,9 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button = ({ children, className, type }) => {
+interface IButton {
+  children: React.ReactNode;
+  className?: string;
+  type?: "button" | "submit" | "reset";
+}
+
+const Button: React.FC<IButton> = ({ 
+  children, 
+  className, 
+  type
+}) => {
   return (
-    <PrimaryButton type={type} className={className}>
+    <PrimaryButton
+      type={type}
+      className={className}
+
+    >
       {children}
     </PrimaryButton>
   );

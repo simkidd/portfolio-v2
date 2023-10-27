@@ -1,7 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const Title = ({ title, span }) => {
+interface ITitle {
+  title: string;
+  span: string;
+}
+
+const Title: React.FC<ITitle> = ({ title, span }) => {
   return (
     <TitleWrapper>
       <p>

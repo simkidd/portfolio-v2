@@ -1,146 +1,92 @@
-:root {
-    --primaryColor: #007bff;
-    --primaryColorLight: #057fff;
-    --secondaryColor: #ff7675;
-    --backgroundDarkColor: #f1f1f1;
-    --backgroundDarkGrey: #e4e4e4;
-    --borderColor: #cbced8;
-    --backgroundLightColor: #f1f1f1;
-    --backgroundLightColor2: rgba(3, 127, 255, 0.3);
-    --whiteColor: #151515;
-    --fontLightColor: #313131;
-    --fontDarkColor: #313131;
-    --fontDarkColor2: #151515;
-    --sidebarDarkColor: #e4e4e4;
-    --scrollbarBgColor: #383838;
-    --scrollbarThumbColor: #6b6b6b;
-    --scrollbarTrackColor: #383838;
-}
-
-.light-theme {
-    --primaryColor: #007bff;
-    --primaryColorLight: #057fff;
-    --secondaryColor: #ff7675;
-    --backgroundDarkColor: #f1f1f1;
-    --backgroundDarkGrey: #e4e4e4;
-    --borderColor: #cbced8;
-    --backgroundLightColor: #f1f1f1;
-    --backgroundLightColor2: rgba(3, 127, 255, 0.3);
-    --whiteColor: #151515;
-    --fontLightColor: #313131;
-    --fontDarkColor: #313131;
-    --fontDarkColor2: #151515;
-    --sidebarDarkColor: #e4e4e4;
-    --scrollbarBgColor: #383838;
-    --scrollbarThumbColor: #6b6b6b;
-    --scrollbarTrackColor: #383838;
-}
-
-.dark-theme {
-    --primaryColor: #007bff;
-    --primaryColorLight: #057fff;
-    --secondaryColor: #ff7675;
-    --backgroundDarkColor: #10121a;
-    --backgroundDarkGrey: #20232d;
-    --borderColor: #1c1f2b;
-    --backgroundLightColor: #10121a;
-    --backgroundLightColor2: rgba(3, 127, 255, 0.3);
-    --whiteColor: #f1f1f1;
-    --fontLightColor: #a4acc4;
-    --fontDarkColor: #f1f1f1;
-    --fontDarkColor2: #e4e4e4;
-    --sidebarDarkColor: #20232d;
-    --scrollbarBgColor: #383838;
-    --scrollbarThumbColor: #6b6b6b;
-    --scrollbarTrackColor: #383838;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import "./styles/global.scss";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-    color: var(--fontLightColor);
-    transition: all 0.4s ease;
-    background: var(--backgroundLightColor);
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  color: var(--fontLightColor);
+  transition: all 0.4s ease;
+  background: var(--backgroundLightColor);
 
-    .app__container {
+  .app__container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .menuOpen__btn {
+      position: fixed;
+      display: none;
+      cursor: pointer;
+      color: var(--whiteColor);
+
+      @media screen and (max-width: 768px) {
+        // right: 0;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        background-color: var(--backgroundDarkGrey);
+        margin: 2rem;
+        padding: 0.4rem;
         display: flex;
-        width: 100%;
-        height: 100vh;
-        position: relative;
+        border: 1px solid var(--borderColor);
 
-        .menuOpen__btn {
-            position: fixed;
-            display: none;
-            cursor: pointer;
-            color: var(--whiteColor);
-
-            @media screen and (max-width: 768px) {
-                // right: 0;
-                left: 0;
-                top: 0;
-                z-index: 10;
-                background-color: var(--backgroundDarkGrey);
-                margin: 2rem;
-                padding: 0.4rem;
-                display: flex;
-                border: 1px solid var(--borderColor);
-
-            }
-        }
-
-        .main__content {
-            margin-left: 250px;
-            width: 100%;
-
-            @media screen and (max-width: 768px) {
-                margin-left: 0;
-            }
-
-            .main__layout {
-                padding: 5rem;
-
-                @media screen and (max-width: 768px) {
-                    padding: 2rem;
-                }
-            }
-
-            .inner__layout {
-                padding: 5rem 0;
-
-                @media screen and (max-width: 768px) {
-                    padding: 2.5rem 0;
-                }
-            }
-        }
+      }
     }
+
+    .main__content {
+      margin-left: 250px;
+      width: 100%;
+
+      @media screen and (max-width: 768px) {
+        margin-left: 0;
+      }
+
+      .main__layout {
+        padding: 5rem;
+
+        @media screen and (max-width: 768px) {
+          padding: 2rem;
+        }
+      }
+
+      .inner__layout {
+        padding: 5rem 0;
+
+        @media screen and (max-width: 768px) {
+          padding: 2.5rem 0;
+        }
+      }
+    }
+  }
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
-    display: none;
+  width: 8px;
+  background: transparent;
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: var(--scrollbarThumbColor);
+  border-radius: 10px;
+  background-color: var(--scrollbarThumbColor);
 }
 
 ::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: transparent;
+  border-radius: 10px;
+  background: transparent;
 }

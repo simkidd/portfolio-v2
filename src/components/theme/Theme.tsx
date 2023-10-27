@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import styled from "styled-components";
 
-const Theme = ({theme, themeToggler}) => {
-  
+interface ITheme {
+  theme: string;
+  themeToggler: () => void;
+}
+
+const Theme: React.FC<ITheme> = ({ theme, themeToggler }) => {
+
   return (
     <ThemeToggler>
       <div className="light-dark-mode">

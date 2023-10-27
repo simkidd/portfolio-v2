@@ -1,8 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const TabButtons = ({ activeTab, onTabClick, categories }) => {
-  const capitalize = (str) => {
+interface ITab {
+  activeTab: string;
+  onTabClick: (tab: string) => void;
+  categories: string[];
+}
+
+const TabButtons: React.FC<ITab> = ({ activeTab, onTabClick, categories }) => {
+  const capitalize = (str: string) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
 

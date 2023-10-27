@@ -1,18 +1,15 @@
-import CalcApp from "../assets/projects/calc-app.jpg";
-import FitClub from "../assets/projects/gym-website.jpg";
-import GoTask from "../assets/projects/todo-app.jpg";
-import SendFreight from "../assets/projects/freight-booking.jpg";
-import Purity from "../assets/projects/purity.jpg";
 import Dinny from "../assets/projects/dinny-green.png";
-import PortfolioV1 from "../assets/projects/portfolio-v1.png";
+import FitClub from "../assets/projects/gym-website.jpg";
 import TechUnicorn from "../assets/projects/tech-unicorn-test.png";
-import BlogApp from "../assets/projects/blog-app.png";
-import Real from "../assets/projects/real-explorer.png";
-import Lendsqr from "../assets/projects/lendsqr.png";
+import GoTask from "../assets/projects/todo-app.jpg";
+// import BlogApp from "../assets/projects/blog-app.png";
 import Evogym from "../assets/projects/evogym.png";
-import Netreelz from "../assets/projects/netreelz.png"
+import Lendsqr from "../assets/projects/lendsqr.png";
+import Netreelz from "../assets/projects/netreelz.png";
+import Real from "../assets/projects/real-explorer.png";
+import { IPortfolio } from "../interface/portfolio.interface";
 
-export const portfolios = [
+export const portfolios: IPortfolio[] = [
   {
     id: 1,
     category: "css",

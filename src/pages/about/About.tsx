@@ -1,20 +1,21 @@
-import React from "react";
-import "./about.scss";
-import Title from "../../components/title/Title";
-import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { HiOutlineMail } from "react-icons/hi";
+import Title from "../../components/title/Title";
+import "./about.scss";
 
 const About = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { delay: 0.2, duration: 0.5 } },
+  const titleVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.5 } },
   };
 
-  const textVariants = {
+  const textVariants1 = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.9, delay: 0.8 } },
+  };
+  const textVariants2 = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.4 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 1.2 } },
   };
 
   const iconVariants = {
@@ -31,7 +32,7 @@ const About = () => {
       <div className="main__layout about">
         <motion.div
           className="about__inner"
-          variants={containerVariants}
+          variants={titleVariants}
           initial="hidden"
           animate="visible"
         >
@@ -40,29 +41,33 @@ const About = () => {
           </div>
           <div></div>
         </motion.div>
-        <motion.div
-          className="about__inner"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <div className="about__inner">
           <div>
-            <motion.p className="about__left" variants={textVariants}>
+            <motion.p className="about__left"
+              variants={textVariants1}
+              initial="hidden"
+              animate="visible"
+            >
               Hi, I'm John, nice to meet you. Please take a look around.
             </motion.p>
           </div>
           <div>
-            <motion.p className="about__right" variants={textVariants}>
+            <motion.p className="about__right"
+              variants={textVariants2}
+              initial="hidden"
+              animate="visible"
+            >
               I am passionate about building excellent software that improves
               the lives of those around me. I specialize in creating software
               for individuals and small businesses. What would you do if you had
               a software expert available at your fingertips?
             </motion.p>
           </div>
-        </motion.div>
+        </div>
+
         <motion.div
           className="about__inner"
-          variants={containerVariants}
+          variants={iconVariants}
           initial="hidden"
           animate="visible"
         >

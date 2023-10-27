@@ -12,7 +12,7 @@
         display: grid;
         gap: 2rem;
         grid-template-columns: 1fr 1fr;
-        margin: 0;
+        margin: auto;
 
         @media screen and (max-width: 768px) {
             grid-template-columns: 1fr;

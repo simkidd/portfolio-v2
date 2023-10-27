@@ -1,12 +1,16 @@
 import React from "react";
 import { styled } from "styled-components";
 
-const ContactItem = ({ icon, title, content }) => {
+interface IContactItem {
+  icon: any;
+  content: string;
+}
+
+const ContactItem: React.FC<IContactItem> = ({ icon, content }) => {
   return (
     <Item>
       <div className="left">{icon}</div>
       <div className="right">
-        {/* <h6>{title}</h6> */}
         <p>{content}</p>
       </div>
     </Item>

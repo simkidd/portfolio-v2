@@ -3,28 +3,32 @@ import Button from "../buttons/Button";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import { SiMinutemailer } from "react-icons/si";
+import { config } from "../../utils/config";
+
 
 const ContactForm = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement | null>(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        form.current,
-        "YOUR_PUBLIC_KEY"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    if (form.current) {
+      emailjs
+        .sendForm(
+          config.SERVICE_ID,
+          config.TEMPLATE_ID,
+          form.current,
+          config.PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
   };
 
   return (
@@ -43,7 +47,7 @@ const ContactForm = () => {
       </InputField>
       <InputField>
         <label htmlFor="message">Message</label>
-        <textarea type="text" id="message" cols="30" rows="10" />
+        <textarea id="message" cols={30} rows={10} />
       </InputField>
       <InputField>
         <Button type="submit" className="btn">
@@ -72,6 +76,8 @@ const Form = styled.form`
 const InputField = styled.div`
   width: 100%;
   position: relative;
+ 
+
   label {
     position: absolute;
     left: 10px;
@@ -80,6 +86,7 @@ const InputField = styled.div`
     background: var(--backgroundDarkColor);
     padding: 0 0.2rem;
     color: inherit;
+    font-size: 14px;
   }
   input {
     border: 1px solid var(--borderColor);
@@ -89,6 +96,11 @@ const InputField = styled.div`
     width: 100%;
     outline: none;
     color: inherit;
+    font-family: 'Nunito', sans-serif;
+
+    &:focus{
+      border: 1px solid var(--primaryColor);
+    }
   }
   textarea {
     background: transparent;
@@ -98,6 +110,11 @@ const InputField = styled.div`
     color: inherit;
     padding: 0.8rem 1rem;
     resize: none;
+    font-family: 'Nunito', sans-serif;
+
+    &:focus{
+      border: 1px solid var(--primaryColor);
+    }
   }
 
   p {
@@ -109,5 +126,9 @@ const InputField = styled.div`
     svg {
       margin-left: 0.5rem;
     }
+  }
+
+  .btn{
+    margin: 0;
   }
 `;

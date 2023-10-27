@@ -8,7 +8,9 @@ import GitHub from "../assets/github.png";
 import Tailwind from "../assets/tailwind.png";
 import Firebase from "../assets/firebase.png";
 import Sass from '../assets/sass.png'
-import Typescript from '../assets/typescript.png'
+import Typescript from '../assets/typescript.png';
+import NestJs from '../assets/nestjs.png';
+import GraphQl from '../assets/graphql.png';
 
 export const Data = [
   {
@@ -54,5 +56,13 @@ export const Data = [
   {
     icon: Firebase,
     name: "FIREBASE",
+  },
+  {
+    icon: NestJs,
+    name: "NEST JS",
+  },
+  {
+    icon: GraphQl,
+    name: "GRAPHQL",
   },
 ];

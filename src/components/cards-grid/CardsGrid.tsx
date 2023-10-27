@@ -3,8 +3,14 @@ import { FiExternalLink } from "react-icons/fi";
 import "./cards-grid.scss";
 import { BsCodeSlash } from "react-icons/bs";
 import { PortfolioItemSkeleton } from "../skeleton/Skeleton";
+import { IPortfolio } from "../../interface/portfolio.interface";
 
-const CardsGrid = ({ items, loading }) => {
+interface ICard {
+  items: IPortfolio[];
+  loading: boolean;
+}
+
+const CardsGrid:React.FC<ICard> = ({ items, loading }) => {
   return (
     <div className="grid__wrapper">
       {loading
