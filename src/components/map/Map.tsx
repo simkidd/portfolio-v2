@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Map = () => {
+const Map:React.FC = () => {
   return (
     <MapWrapper>
       <iframe

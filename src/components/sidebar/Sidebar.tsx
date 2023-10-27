@@ -20,8 +20,8 @@ const Sidebar: React.FC<ISidebar> = ({ navShow, setNavShow }) => {
         </div>
 
         <ul className="navlinks">
-          {navLinks.map((link) => (
-            <li>
+          {navLinks.map((link, i) => (
+            <li key={i}>
               <NavLink to={link.href} onClick={() => setNavShow(!navShow)}>
                 {link.title}
               </NavLink>
