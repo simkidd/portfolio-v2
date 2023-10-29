@@ -11,8 +11,10 @@ import Sass from '../assets/sass.png'
 import Typescript from '../assets/typescript.png';
 import NestJs from '../assets/nestjs.png';
 import GraphQl from '../assets/graphql.png';
+import Next from '../assets/next-js.png';
+import { ISkills } from "../interface/skills.interface";
 
-export const Data = [
+export const skillsData: ISkills[] = [
   {
     icon: HTML,
     name: "HTML",
@@ -64,5 +66,9 @@ export const Data = [
   {
     icon: GraphQl,
     name: "GRAPHQL",
+  },
+  {
+    icon: Next,
+    name: "NEXT JS",
   },
 ];

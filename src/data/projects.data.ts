@@ -7,24 +7,29 @@ import Evogym from "../assets/projects/evogym.png";
 import Lendsqr from "../assets/projects/lendsqr.png";
 import Netreelz from "../assets/projects/netreelz.png";
 import Real from "../assets/projects/real-explorer.png";
+import Uniport from "../assets/projects/uniport-sgs.png";
+import Helar from "../assets/projects/helar-law.png";
 import { IPortfolio } from "../interface/portfolio.interface";
 
-export const portfolios: IPortfolio[] = [
+export const projects: IPortfolio[] = [
   {
     id: 1,
     category: "css",
     image: Lendsqr,
     github: "",
-    live: "https://john-mason-lendsqr-fe-test.vercel.app",
+    url: "https://john-mason-lendsqr-fe-test.vercel.app",
     title: "Lendsqr Admin Dashboard",
     text: "Created with React App",
+    tags: [],
+    slug: "lendsqr-admin-dashboard",
+    isPublic: false
   },
   // {
   //   id: 2,
   //   category: "css",
   //   image: BlogApp,
   //   github: "",
-  //   live: "https://onidev-blog.vercel.app",
+  //   url: "https://onidev-blog.vercel.app",
   //   title: "Blog App",
   //   text: "Created with React App",
   // },
@@ -33,62 +38,107 @@ export const portfolios: IPortfolio[] = [
     category: "react",
     image: FitClub,
     github: "",
-    live: "https://thefitclub-gym.netlify.app",
+    url: "https://thefitclub-gym.netlify.app",
     title: "FitClub",
     text: "Created with React App",
+    tags: [],
+    slug: "fitclub",
+    isPublic: true,
   },
   {
     id: 4,
     category: "css",
     image: GoTask,
     github: "",
-    live: "https://onidev-calc.netlify.app",
+    url: "https://onidev-calc.netlify.app",
     title: "Go Task",
     text: "Created with React App",
+    tags: [],
+    slug: "go-task",
+    isPublic: true
   },
   {
     id: 5,
     category: "css",
     image: TechUnicorn,
     github: "",
-    live: "https://tech-unicorn-test.vercel.app",
+    url: "https://tech-unicorn-test.vercel.app",
     title: "Ecommerce App",
     text: "Created with React App",
+    tags: [],
+    slug: "ecommerce-app",
+    isPublic: true
   },
   {
     id: 6,
     category: "css",
     image: Real,
     github: "",
-    live: "https://real-explorer.vercel.app",
+    url: "https://real-explorer.vercel.app",
     title: "Real Explorer",
     text: "Created with React App",
+    tags: [],
+    slug: "real-explorer",
+    isPublic: true
   },
   {
     id: 7,
     category: "react",
     image: Dinny,
     github: "",
-    live: "https://dinny-green-edu.vercel.app/",
+    url: "https://dinny-green-edu.vercel.app/",
     title: "Dinny Green",
     text: "Created with React App",
+    tags: ["Html", "Scss", "React"],
+    slug: "dinny-green",
+    isPublic: true
   },
   {
     id: 8,
     category: "react",
     image: Netreelz,
     github: "",
-    live: "https://netreelz.vercel.app/",
+    url: "https://netreelz.vercel.app/",
     title: "NetReelz",
     text: "Created with React App",
+    tags: ["Html", "Scss", "React", "Axios", "Firebase"],
+    slug: "netreelz",
+    isPublic: true
   },
   {
     id: 9,
     category: "react",
     image: Evogym,
     github: "",
-    live: "https://evo-fitness-gym.vercel.app/",
+    url: "https://evo-fitness-gym.vercel.app/",
     title: "EvoGym",
     text: "Created with React App",
+    tags: ["Html", "React", "Typescript", "Tailwindcss"],
+    slug: "evo-gym",
+    isPublic: true
+  },
+  {
+    id: 10,
+    category: "react",
+    image: Helar,
+    github: "",
+    url: "",
+    title: "Helar Law",
+    text: "Created with React App",
+    tags: ["Html", "Scss", "React", "Typescript", "Bootstrap", "Next Js", "Styled Components", "Graphql"],
+    slug: "helar-law",
+    isPublic: false
+  },
+  {
+    id: 11,
+    category: "react",
+    image: Uniport,
+    github: "",
+    url: "https://uniport-sgs.com",
+    title: "Uniport School of Graduate Studies",
+    text: "Created with React App",
+    tags: ["Html", "Scss", "React", "Typescript", "Bootstrap", "Next Js", "Styled Components", "Graphql"],
+    slug: "uniport-sgs",
+    isPublic: false
   },
 ];

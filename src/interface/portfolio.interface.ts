@@ -3,7 +3,10 @@ export interface IPortfolio {
   category: string;
   image: string;
   github: string;
-  live: string;
+  url: string;
   title: string;
   text: string;
+  tags: string[];
+  slug: string;
+  isPublic: boolean;
 }

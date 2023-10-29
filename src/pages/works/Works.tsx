@@ -1,51 +1,58 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
-import TabButtons from "../../components/buttons/TabButtons";
+// import TabButtons from "../../components/buttons/TabButtons";
+import { motion } from "framer-motion";
 import CardsGrid from "../../components/cards-grid/CardsGrid";
 import Title from "../../components/title/Title";
-import { portfolios } from "../../data/porfolioData";
+import { projects } from "../../data/projects.data";
 
 const Works = () => {
-  const [activeTab, setActiveTab] = useState("All");
-  const [loading, setLoading] = useState(true);
-
+  const [activeTab, setActiveTab] = useState("all");
 
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
   };
 
   // Filter menu items based on active tab
-  const filteredItems =
-    activeTab === "All"
-      ? portfolios
-      : portfolios.filter((item) => item.category === activeTab);
+  const filteredProjects =
+    activeTab === "all"
+      ? projects
+      : projects.filter((item) => item.category === activeTab);
 
   // Utility function to get unique categories from menu items
   const getCategories = () => {
-    const categories = portfolios.map((item) => item.category);
-    return ["All", ...new Set(categories)];
+    const categories = projects.map((item) => item.category);
+    return ["all", ...new Set(categories)];
   };
 
-  // Simulate loading delay
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+  const titleVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.5 } },
+  };
+
 
   return (
     <WorksWrapper>
       <div className="main__layout">
         <div className="works__wrap">
-          <Title title="Works" span="Works" />
-          <div className="inner__layout">
-            <TabButtons
+          <motion.div
+            variants={titleVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <Title title="Works" span="Works" />
+          </motion.div>
+
+          <motion.div
+            className="inner__layout"
+          >
+            {/* <TabButtons
               activeTab={activeTab}
               onTabClick={handleTabClick}
               categories={getCategories()}
-            />
-            <CardsGrid items={filteredItems} loading={loading} />
-          </div>
+            /> */}
+            <CardsGrid items={filteredProjects} />
+          </motion.div>
         </div>
       </div>
     </WorksWrapper>

@@ -34,6 +34,9 @@
   --scrollbarBgColor: #383838;
   --scrollbarThumbColor: #6b6b6b;
   --scrollbarTrackColor: #383838;
+  --skeleton1: #cfcdcd;
+  --skeleton2: #fcfcfc;
+  --titleColor: rgba(141, 144, 153, 0.15);
 }
 
 .dark-theme {
@@ -53,4 +56,7 @@
   --scrollbarBgColor: #383838;
   --scrollbarThumbColor: #6b6b6b;
   --scrollbarTrackColor: #383838;
+  --skeleton1: #333;
+  --skeleton2: #444;
+  --titleColor: rgba(25, 29, 43, 0.3);
 }

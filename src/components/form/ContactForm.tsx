@@ -135,7 +135,6 @@ const Form = styled.form`
 const InputField = styled.div`
   width: 100%;
   position: relative;
- 
 
   label {
     position: absolute;

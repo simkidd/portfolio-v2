@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Title from "../../components/title/Title";
-import { Data } from "../../data/skillsData";
+import { skillsData } from "../../data/skills.data";
 import "./skills.scss";
 
 const Skills = () => {
@@ -37,7 +37,7 @@ const Skills = () => {
           </motion.div>
 
           <motion.div className="skills__inner">
-            {Data.map((skill, i) => (
+            {skillsData.map((skill, i) => (
               <motion.div
                 className="skill__card"
                 key={i}

@@ -29,7 +29,6 @@ const PrimaryButton = styled.button`
   color: inherit;
   border: 2px solid var(--borderColor);
   background: transparent;
-  /* background: var(--primaryColor); */
   margin: 1.5rem 0;
   cursor: pointer;
   display: flex;
