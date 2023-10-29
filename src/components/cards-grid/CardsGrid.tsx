@@ -27,7 +27,7 @@ const CardsGrid: React.FC<ICard> = ({ items }) => {
           animate="visible"
         >
           <div className="grid__item__image">
-            <img src={item.image} alt="" />
+            <img src={item.image} alt="" loading="lazy" />
             <ul>
               {item.isPublic && (
                 <li>

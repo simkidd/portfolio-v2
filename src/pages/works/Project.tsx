@@ -38,7 +38,7 @@ const Project: React.FC = () => {
                   transitionSpeed={3000}
                 >
                   <div className='img__wrapper'>
-                    <img src={item?.image} alt="" />
+                    <img src={item?.image} alt="" loading='lazy' />
                   </div>
                 </Tilt>
                 <ul className='project__tags'>
