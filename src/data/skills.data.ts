@@ -5,6 +5,7 @@ import ReactIcon from "../assets/react.png";
 import Node from "../assets/node.png";
 import Mongo from "../assets/mongo.png";
 import GitHub from "../assets/github.png";
+import Git from "../assets/git.png";
 import Tailwind from "../assets/tailwind.png";
 import Firebase from "../assets/firebase.png";
 import Sass from '../assets/sass.png'
@@ -46,6 +47,10 @@ export const skillsData: ISkills[] = [
   {
     icon: GitHub,
     name: "GITHUB",
+  },
+  {
+    icon: Git,
+    name: "GIT",
   },
   {
     icon: Sass,
