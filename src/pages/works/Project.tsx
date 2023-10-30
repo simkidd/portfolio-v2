@@ -12,7 +12,7 @@ const Project: React.FC = () => {
   const navigate = useNavigate()
   const { id } = useParams<{ id: string }>();
   const itemId = id ? parseInt(id, 10) : undefined;
-  const item = projects.find((project) => project.id == itemId);
+  const item = projects.find((project) => project.id === itemId);
 
 
   return (
@@ -52,14 +52,14 @@ const Project: React.FC = () => {
                 <div className='project__buttons'>
                   {item?.isPublic && (
                     <Button>
-                      <a href='' target='_blank'>
+                      <a href={item?.github} target='_blank'>
                         Code
                         <BsCodeSlash style={{ marginLeft: "0.75rem" }} size={16} />
                       </a>
                     </Button>
                   )}
                   <Button>
-                    <a href='' target='_blank'>
+                    <a href={item?.url} target='_blank'>
                       Go Live
                       <FiExternalLink style={{ marginLeft: "0.75rem" }} size={16} />
                     </a>
